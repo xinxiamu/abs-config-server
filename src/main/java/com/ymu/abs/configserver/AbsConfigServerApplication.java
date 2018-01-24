@@ -1,4 +1,4 @@
-package com.ymu.abs.absconfigserver;
+package com.ymu.abs.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
