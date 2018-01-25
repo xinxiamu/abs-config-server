@@ -1,0 +1,47 @@
+server:
+  port: 8888
+
+---
+security:
+  user:
+    name: admin
+    password: 123456
+
+---
+#改变url访问路径:http://192.168.1.146:8888/admin/
+management:
+  context-path: /admin
+
+---
+#作为服务注册到注册中心
+eureka:
+  instance:
+    prefer-ip-address: true #显示ip
+    hostname: localhost
+#    health-check-url-path: /health #查看健康运行状态
+#    status-page-url-path: /info
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+
+---
+#git配置中心
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xinxiamu/abs-config-repo
+          basedir: target/config #git的配置文件会加载到本地的目录
+#          search-paths:
+
+---
+# spring-cloud-bus刷新配置
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: abs
+    password: abs
+    publisher-confirms: true
+    virtual-host: /
