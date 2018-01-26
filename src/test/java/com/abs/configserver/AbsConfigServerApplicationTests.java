@@ -1,4 +1,4 @@
-package com.ymu.abs.configserver;
+package com.abs.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
