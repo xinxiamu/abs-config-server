@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 3331
 
 ---
 security:
@@ -9,8 +9,8 @@ security:
 
 ---
 #改变url访问路径:http://192.168.1.146:8888/admin/
-management:
-  context-path: /admin
+#management:
+#  context-path: /admin
 
 ---
 #作为服务注册到注册中心
@@ -22,7 +22,7 @@ eureka:
 #    status-page-url-path: /info
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:1111/eureka/
+      defaultZone: http://${eureka.instance.hostname}:2221/eureka/
 
 ---
 #git配置中心
