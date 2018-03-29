@@ -1,6 +1,6 @@
 spring:
   application:
-    name: abs-config-server
+    name: ymu-config-server
 
 ---
 spring:
