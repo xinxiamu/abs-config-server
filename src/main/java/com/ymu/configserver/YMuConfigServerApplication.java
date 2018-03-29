@@ -1,4 +1,4 @@
-package com.abs.configserver;
+package com.ymu.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,9 +10,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableDiscoveryClient
 @EnableConfigServer // 开启配置中心功能
 @SpringBootApplication
-public class AbsConfigServerApplication {
+public class YMuConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AbsConfigServerApplication.class, args);
+		SpringApplication.run(YMuConfigServerApplication.class, args);
 	}
 }

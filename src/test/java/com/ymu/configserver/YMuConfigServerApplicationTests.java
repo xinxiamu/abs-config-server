@@ -1,4 +1,4 @@
-package com.abs.configserver;
+package com.ymu.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class AbsConfigServerApplicationTests {
+public class YMuConfigServerApplicationTests {
 
 	@Test
 	public void contextLoads() {

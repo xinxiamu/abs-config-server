@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ymu.abs</groupId>
-    <artifactId>abs-config-server</artifactId>
+    <artifactId>ymu-config-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>abs-config-server</name>
+    <name>ymu-config-server</name>
     <description>配置中心服务器</description>
 
     <parent>
