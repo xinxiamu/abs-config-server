@@ -8,17 +8,6 @@ security:
     password: 701712
 
 ---
-#encrypt:
-#  keyStore:
-#    location: classpath:/server.jks
-#    password: letmein  # storepass
-#    alias: mytestkey    # alias
-#    secret: changeme   # keypass
-#  fail-on-error: false
-encrypt:
-  key: foo
-
----
 #改变url访问路径
 management:
   context-path: /admin
