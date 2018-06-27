@@ -2,22 +2,23 @@ server:
   port: 3331
 
 ---
-security:
-  user:
-    name: admin
-    password: 123456
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
 
 ---
 #改变url访问路径:http://192.168.1.146:8888/admin/
 #management:
 #  context-path: /admin
 
----
 #作为服务注册到注册中心
 eureka:
   instance:
-    prefer-ip-address: true #显示ip
-    hostname: localhost
+    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
+    prefer-ip-address: true #显示ip,浏览器以ip方式请求。
+    hostname: localhost #域名
 #    health-check-url-path: /health #查看健康运行状态
 #    status-page-url-path: /info
   client:
@@ -32,7 +33,10 @@ spring:
       server:
         git:
           uri: https://github.com/xinxiamu/ymu-config-repo
-          basedir: target/config #git的配置文件会加载到本地的目录
+          #git的配置文件会加载到本地的目录
+          basedir: target/config
+          # 设置超时
+          timeout: 4
 #          search-paths:
 
 ---
