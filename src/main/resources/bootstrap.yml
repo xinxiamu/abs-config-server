@@ -8,7 +8,7 @@ spring:
     active: dev
 
 ---
-## 非对称加解密,只能放在bootstrap.yml中
+## 非对称加解密,该段配置只能放在bootstrap.yml中
 encrypt:
   keyStore:
     location: classpath:/config-server.jks
