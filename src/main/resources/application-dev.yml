@@ -16,11 +16,11 @@ spring:
 #作为服务注册到注册中心
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
+#    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
     prefer-ip-address: true #显示ip,浏览器以ip方式请求。
     hostname: localhost #域名
-#    health-check-url-path: /health #查看健康运行状态
-#    status-page-url-path: /info
+    health-check-url-path: /actuator/health #查看健康运行状态
+    status-page-url-path: /actuator/info
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:2221/eureka/
