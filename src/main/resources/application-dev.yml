@@ -18,8 +18,10 @@ eureka:
   instance:
 #    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
     prefer-ip-address: true #显示ip,浏览器以ip方式请求。
-    hostname: localhost #域名
-    health-check-url-path: /actuator/health #查看健康运行状态
+    #域名
+    hostname: localhost
+    #查看健康运行状态
+    health-check-url-path: /actuator/health
     status-page-url-path: /actuator/info
   client:
     service-url:
