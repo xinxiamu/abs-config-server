@@ -1,14 +1,6 @@
 server:
   port: 3331
 
----
-spring:
-  security:
-    user:
-      name: admin
-      password: 123456
-
----
 #改变url访问路径:http://192.168.1.146:8888/admin/
 #management:
 #  context-path: /admin
@@ -27,10 +19,13 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:2221/eureka/
 
----
-#git配置中心
 spring:
+  security:
+      user:
+        name: admin
+        password: 123456
   cloud:
+    #git配置中心
     config:
       server:
         git:
@@ -40,14 +35,15 @@ spring:
           # 设置超时
           timeout: 4
 #          search-paths:
-
----
-# spring-cloud-bus刷新配置
-spring:
+  # spring-cloud-bus刷新配置
   rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: abs
-    password: abs
-    publisher-confirms: true
-    virtual-host: /
+      host: 127.0.0.1
+      port: 5672
+      username: abs
+      password: abs
+      publisher-confirms: true
+      virtual-host: /
+
+encrypt:
+  fail-on-error: false
+

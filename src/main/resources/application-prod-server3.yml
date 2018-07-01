@@ -2,17 +2,10 @@ server:
   port: 8890
 
 ---
-security:
-  user:
-    name: mutou
-    password: 701712
-
----
 #改变url访问路径
-management:
-  context-path: /admin
+#management:
+#  context-path: /admin
 
----
 eureka:
   client:
     service-url:
@@ -22,8 +15,18 @@ eureka:
     health-check-url-path: /admin/health #查看健康运行状态
     status-page-url-path: /admin/info
 
----
 spring:
+  # spring-cloud-bus刷新配置
+  rabbitmq:
+      host: 119.23.78.160
+      port: 5672
+      username: zmt
+      password: 701712
+      virtual-host: /
+  security:
+    user:
+      name: mutou
+      password: 701712
   cloud:
     config:
       server:
@@ -33,12 +36,3 @@ spring:
 #          username:
 #          password:
 
----
-# spring-cloud-bus刷新配置
-spring:
-  rabbitmq:
-    host: 119.23.78.160
-    port: 5672
-    username: zmt
-    password: 701712
-    virtual-host: /

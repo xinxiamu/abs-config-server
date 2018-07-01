@@ -1,21 +1,14 @@
 spring:
   application:
     name: ymu-config-server
-
----
-spring:
   profiles:
     active: dev
 
----
 ## 非对称加解密,该段配置只能放在bootstrap.yml中
 encrypt:
-  keyStore:
+  key-store:
     location: classpath:/config-server.jks
     password: 111111  # storepass
     alias: config-server    # alias
     secret: 222222   # keypass
 
----
-encrypt:
-  failOnError: false
