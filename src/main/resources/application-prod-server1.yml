@@ -2,10 +2,11 @@ server:
   port: 8888
 
 ---
-security:
-  user:
-    name: mutou
-    password: 701712
+spring:
+  security:
+    user:
+      name: mutou
+      password: 701712
 
 ---
 #改变url访问路径

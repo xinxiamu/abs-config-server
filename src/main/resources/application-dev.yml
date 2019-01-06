@@ -36,6 +36,7 @@ spring:
           timeout: 4
 #          search-paths:
   # spring-cloud-bus刷新配置
+  #http://localhost:15672/
   rabbitmq:
       host: 127.0.0.1
       port: 5672
